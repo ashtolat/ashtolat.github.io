@@ -1,0 +1,4 @@
+title: My Blog
+description: A blog website with a sidebar
+baseurl: "" # Set baseurl if hosted in a subdirectory
+url: "" # Your website URL
