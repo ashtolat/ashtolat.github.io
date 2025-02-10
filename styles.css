@@ -1,0 +1,197 @@
+/* ================================= */
+/*           GLOBAL STYLES           */
+/* ================================= */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #e0e0e0;
+    --accent-color: #00bcd4;
+    --text-color: #333;
+    --shadow-light: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    --shadow-dark: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+/* DARK MODE */
+.dark-mode {
+    --primary-color: #181818;
+    --secondary-color: #222;
+    --text-color: #fff;
+    --shadow-light: 5px 5px 10px #111, -5px -5px 10px #222;
+    --shadow-dark: inset 5px 5px 10px #111, inset -5px -5px 10px #222;
+}
+
+/* ================================= */
+/*        BODY & CONTAINER           */
+/* ================================= */
+body {
+    background: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* ================================= */
+/*          DARK MODE TOGGLE         */
+/* ================================= */
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dark-mode-toggle span {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.toggle-btn {
+    width: 50px;
+    height: 25px;
+    background: var(--secondary-color);
+    border-radius: 25px;
+    box-shadow: var(--shadow-light);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.toggle-btn::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 5px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: var(--shadow-light);
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .toggle-btn {
+    background: var(--accent-color);
+}
+
+.dark-mode .toggle-btn::before {
+    left: 25px;
+    box-shadow: var(--shadow-dark);
+}
+
+/* ================================= */
+/*        NEUMORPHIC COMPONENTS      */
+/* ================================= */
+.neu-card {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease, border 0.3s ease;
+}
+
+.neu-card:hover {
+    transform: scale(1.05);
+}
+
+/* ================================= */
+/*        CUSTOM BORDER THEMES       */
+/* ================================= */
+.blue-theme {
+    background: transparent !important; /* No fill */
+    border: 2px solid #A7C7E7 !important; /* Pastel Blue border */
+    color: var(--text-color);
+}
+
+.orange-theme {
+    background: transparent !important; /* No fill */
+    border: 2px solid #FFA07A !important; /* Light Salmon border */
+    color: var(--text-color);
+}
+
+.pink-theme {
+    background: transparent !important; /* No fill */
+    border: 2px solid #FFC0CB !important; /* Pink border */
+    color: var(--text-color);
+}
+
+/* Neumorphism Buttons */
+.neu-button {
+    background: var(--secondary-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.neu-button:active {
+    box-shadow: var(--shadow-dark);
+}
+
+/* ================================= */
+/*        FIXED NEUMORPHIC INPUTS    */
+/* ================================= */
+.neu-input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    box-shadow: var(--shadow-light);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.neu-input:focus {
+    box-shadow: var(--shadow-dark);
+}
+
+/* ================================= */
+/*          SIMPLE ANIMATIONS        */
+/* ================================= */
+.hover-scale {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+
+.hover-tilt {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-tilt:hover {
+    transform: rotate(5deg);
+}
+
+/* ================================= */
+/*          RESPONSIVE DESIGN        */
+/* ================================= */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
