@@ -30,27 +30,31 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     margin: 0;
+    overflow-y: auto;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
     text-align: center;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
+    padding: 20px;
 }
 
 /* ================================= */
 /*          DARK MODE TOGGLE         */
 /* ================================= */
 .dark-mode-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .dark-mode-toggle span {
@@ -129,6 +133,12 @@ body {
     color: var(--text-color);
 }
 
+.white-theme {
+    background: transparent !important; /* No fill */
+    border: 2px solid #ffffff !important; /* White border */
+    color: var(--text-color);
+}
+
 /* Neumorphism Buttons */
 .neu-button {
     background: var(--secondary-color);
@@ -148,7 +158,7 @@ body {
 }
 
 /* ================================= */
-/*        FIXED NEUMORPHIC INPUTS    */
+/*        NEUMORPHIC INPUTS          */
 /* ================================= */
 .neu-input {
     width: 90%;
@@ -166,6 +176,76 @@ body {
 
 .neu-input:focus {
     box-shadow: var(--shadow-dark);
+}
+
+/* ================================= */
+/*          SMALL SQUARE             */
+/* ================================= */
+.squares-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ensures 5px padding on both sides */
+    margin-top: 10px;
+}
+
+.small-square {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease-in-out, background 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Animation */
+.small-square:hover {
+    transform: scale(1.2);
+}
+
+/* ================================= */
+/*          MARKDOWN STYLES          */
+/* ================================= */
+
+/* Markdown Content */
+#markdown-container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Markdown Headings */
+#markdown-container h1, 
+#markdown-container h2, 
+#markdown-container h3 {
+    color: var(--text-color);
+    text-shadow: var(--shadow-light);
+}
+
+/* Markdown Paragraphs */
+#markdown-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Markdown Lists */
+#markdown-container ul {
+    padding-left: 20px;
+}
+
+/* Neumorphic Buttons Inside Markdown */
+#markdown-container .neu-button {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Neumorphic Inputs Inside Markdown */
+#markdown-container .neu-input {
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* ================================= */

@@ -2,7 +2,7 @@
  ==========================================
 Developed by: Ashton Trumble (ashtolat)
 Description: A website for documentation and blogs for my projects and work experience.
-All assets, design, and scripts created by Ashton Trumble.
+Assets, design, and scripts created by Ashton Trumble.
 ==========================================
 -->
 
@@ -11,8 +11,9 @@ All assets, design, and scripts created by Ashton Trumble.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Neumorphism UI</title>
+    <title>Ashtolat Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Markdown javascript parser and compiler developed by markedjs -->
 </head>
 <body>
 
@@ -68,8 +69,21 @@ All assets, design, and scripts created by Ashton Trumble.
                     <h3>Tilt Effect</h3>
                     <p>Hover over me to see the tilt effect.</p>
                 </div>
-            </section>
 
+                
+            </section>
+            <section class="component-section">
+                <h2>Small Square Hover</h2>
+                <div class="squares-container">
+                    <div class="small-square hover-scale blue-theme"></div>
+                    <div class="small-square hover-scale orange-theme"></div>
+                    <div class="small-square hover-scale white-theme"></div>
+                </div>
+            </section>
+            <section class="component-section">
+                <h2>Blog</h2>
+                <div id="markdown-container"></div>
+            </section>
         </main>
     </div>
 
