@@ -1,4 +1,4 @@
-# Welcome to My Blog by Ashton Trumble ✨
+# Welcome to My Blog by Ashtolat ✨
 This is a **blog** with Markdown.
 
 ## Features:
