@@ -121,15 +121,15 @@ body {
     color: var(--text-color);
 }
 
-.orange-theme {
+.green-theme {
     background: transparent !important; /* No fill */
-    border: 2px solid #FFA07A !important; /* Light Salmon border */
+    border: 2px solid #93ff89 !important; /* Light Salmon border */
     color: var(--text-color);
 }
 
-.pink-theme {
+.red-theme {
     background: transparent !important; /* No fill */
-    border: 2px solid #FFC0CB !important; /* Pink border */
+    border: 2px solid #ff4564 !important; /* red border */
     color: var(--text-color);
 }
 
